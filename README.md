@@ -9,13 +9,13 @@ def sort_distance(canteen_distance):   #canteen distance is a list
 
     # base case
   if list_len < 2:
-  return canteen_distance
+    return canteen_distance
   left_list = canteen_distance[:list_len // 2]   # //
   right_list = canteen_distance[list_len // 2:]  # "//" to force division
 
     # merge sort left and right list recursively
-  left_list = mergesort(left_list)
-  right_list = mergesort(right_list) 
+  left_list = sort_distance(left_list)
+  right_list = sort_distance(right_list) 
   return merge(left_list, right_list)
   
 def merge(left_list, right_list):
@@ -38,3 +38,4 @@ def merge(left_list, right_list):
     result_list.extend(right_list)
     
   return result_list
+  
