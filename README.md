@@ -38,4 +38,8 @@ def merge(left_list, right_list):
     result_list.extend(right_list)
     
   return result_list
-  
+
+def search_by_food(foodname, foodlist_canteens, if_halal, list_of_food):
+  for i in range(4):
+    if (foodname==foodlist_canteens[i][0]) and (if_halal==foodlist_canteens[i][1]):
+      list_of_food.append(foodlist_canteens[5])
