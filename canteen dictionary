@@ -1,5 +1,5 @@
 can_food = {
-"Canteen 1" :[["Vegetarian", "halal", "2"], ["Western", "non-halal", "6"], ["Mala", "non-halal", "9"], ["Beef Noodles", "non-halal", "4"], ["Duck Rice", "halal", "3"]],
+"Canteen 1" :[["Vegetarian", "halal", 2], ["Western", "non-halal", 6], ["Mala", "non-halal", 9], ["Beef Noodles", "non-halal", 4], ["Duck Rice", "halal", 3]],
 
 "Canteen 2" :[["Mixed Veg Rice", "halal", "3"], ["Ayam Penyet", "halal", "5"], ["Roti Prata", "halal", "4"],  ["Waffle", "halal", "1"], ["Xiao Long Bao", "non-halal", "7"]],
 
@@ -33,4 +33,16 @@ def search_by_food(foodname, fooddict_canteens, if_halal):
           list_of_food.append(key)  
   return list_of_food
     
+
+def search_by_price(foodprice, foodname, fooddict_canteens, if_halal):
+  list_of_food=[]
+  for key,value in fooddict_canteens.items():
+    for i in range(5): 
+     if if_halal == "halal":
+         if (foodprice <= value[i][2]) and (if_halal==value[i][1]) and (foodname==value[i][0]):
+      	      list_of_food.append(key)
+     elif (foodprice <= value[i][2]) and (foodname==value[i][0]):
+                list_of_food.append(key)
+  return list_of_food
+                
 
