@@ -39,10 +39,10 @@ def search_by_price(foodprice, foodname, fooddict_canteens, if_halal):
   for key,value in fooddict_canteens.items():
     for i in range(5): 
      if if_halal == "halal":
-         if (foodprice <= value[i][2]) and (if_halal==value[i][1]) and (foodname==value[i][0]):
+         if (foodprice <= value[i][2]) and (if_halal=="halal") and (foodname==value[i][0]):
       	      list_of_food.append(key)
-     elif (foodprice <= value[i][2]) and (foodname==value[i][0]):
+     else:
+         if (foodprice <= value[i][2]) and (foodname==value[i][0]):
                 list_of_food.append(key)
   return list_of_food
-                
 
