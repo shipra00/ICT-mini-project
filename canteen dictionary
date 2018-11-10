@@ -21,28 +21,3 @@ can_food = {
 
 }
 
-def search_by_food(foodname, fooddict_canteens, if_halal): 
-  list_of_food=[]
-  for key,value in fooddict_canteens.items():
-    for i in range(5):
-      if if_halal!="halal":
-        if value[i][0]==foodname:
-          list_of_food.append(key)
-      else:
-        if (value[i][0]==foodname and value[i][1]==if_halal):
-          list_of_food.append(key)  
-  return list_of_food
-    
-
-def search_by_price(foodprice, foodname, fooddict_canteens, if_halal):
-  list_of_food=[]
-  for key,value in fooddict_canteens.items():
-    for i in range(5): 
-     if if_halal == "halal":
-         if (foodprice >= value[i][2]) and (if_halal=="halal") and (foodname==value[i][0]):
-      	      list_of_food.append(key)
-     else:
-         if (foodprice >= value[i][2]) and (foodname==value[i][0]):
-                list_of_food.append(key)
-  return list_of_food
-
