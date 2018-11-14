@@ -1,5 +1,7 @@
 def update_rank(canteenname, newrank, canteen_ranklist):
   
+  #canteenname: canteen to update; newrank: new rank of relevant canteen; canteen_ranklist: list of canteen ranks
+
   for i in range(10):
     if(canteenname==canteen_ranklist[i][0]):
       oldrank=canteen_ranklist[i][1]
