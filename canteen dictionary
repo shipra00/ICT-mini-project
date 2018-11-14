@@ -43,5 +43,10 @@ def update_rank(canteenname, newrank, canteen_ranklist):
     for i in range(10):
       if canteen_ranklist[i][1]<oldrank and canteen_ranklist[i][1]>=newrank:
         canteen_ranklist[i][1]+=1
-        
+  
+  for i in range(10):
+    if(canteenname==canteen_ranklist[i][0]):
+      canteen_ranklist[i][1]=newrank
+      break      
+  
   return canteen_ranklist     
